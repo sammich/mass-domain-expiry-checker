@@ -6,19 +6,23 @@ const whois = require('whois');
 const utils = require('./utils');
 const tlds = require('./tlds');
 
+// serial - don't want to flood registrars with requests
+// small pause between subsequen queries
 const execQueue = async.priorityQueue((domain, done) => {
     lookup(domain, () => {
-        delayCall(done);
+        delayCall(done, 250);
     });
 }, 1);
 
-let maxDomainLength = 0;
+let maxDomainLength = 0; // used for pretty print
 
 fs
 .readFileSync('./domains.txt', 'utf-8')
 .split('\n')
 .forEach(d => {
-    if (d.trim() && d[0] !== '#') {
+    d = d.trim();
+    
+    if (d && d[0] !== '#') {
         maxDomainLength = Math.max(d.length, maxDomainLength);
         execQueue.push(d.toLowerCase());
     }
@@ -34,7 +38,7 @@ function lookup(domain, done) {
     }
     
     if (!pttn) {
-        console.error(`TLD not handled: ${tld}`);
+        printDomainResult(domain, `TLD "${tld}" does not have parser patterns set`, true);
         return done();
     }
     
