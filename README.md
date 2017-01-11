@@ -21,3 +21,10 @@ This tool assumes that whois query results are consistent between all queries to
 
 To add support for more TLDs, simply add the corresponding regex' and MomentJS format string into
 `tlds.js`.
+
+## Sample output
+
+    cnn.com           | 2018-09-21 - 617 days
+    apple.com         | 2021-02-20 - 1500 days
+    youtube.com       | 2017-02-14 - 33 days
+    theregister.co.uk | 2018-03-14 - 426 days
