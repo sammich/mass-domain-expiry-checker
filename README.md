@@ -4,7 +4,7 @@ If you're the type of person who needs to keep an eye on a lot of domain expirie
 just be the tool for you!
 
 This script simply requests whois information for all the domains you've entered into `domains.txt`
-and tries to extract the expiry information and pretty prints the results.\
+and tries to extract the expiry information and pretty prints the results.
 
 ## Install
 
