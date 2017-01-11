@@ -1,0 +1,7 @@
+# list valid whois domain queries below, one per line - blank lines are okay
+
+smh.com.au
+cnn.com
+apple.com
+youtube.com
+theregister.co.uk
