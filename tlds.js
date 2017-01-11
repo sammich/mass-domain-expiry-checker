@@ -1,12 +1,11 @@
 /**
  * { [ tld: string ]: [ regex_match_expire_line, regex_extract_date, momentjs_parse ]
- *
  */
 const patterns = {
     '.com': [
         /Registrar Registration Expiration Date/,
         /: (.+)/,
-        // 2018-09-21T04:00:00Z - moment JS handles automatically
+        // 2018-09-21T04:00:00Z - momentjs handles automatically
     ],
     '.co.uk': [
         /Expiry date:  /,
