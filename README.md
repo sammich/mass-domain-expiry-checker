@@ -1,4 +1,4 @@
-# whois-domain-checker
+# mass-domain-expiry-tool
 
 If you're the type of person who needs to keep an eye on a lot of domain expiries, then this might
 just be the tool for you!
