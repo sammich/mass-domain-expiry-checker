@@ -1,4 +1,4 @@
-# mass-domain-expiry-tool
+# mass-domain-expiry-checker
 
 If you're the type of person who needs to keep an eye on a lot of domain expiries, then this might
 just be the tool for you!
@@ -9,6 +9,10 @@ and tries to extract the expiry information and pretty prints the results.
 ## Install
 
     npm install
+
+or
+
+    yarn
 
 ## Run
 

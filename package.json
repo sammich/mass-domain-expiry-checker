@@ -1,5 +1,5 @@
 {
-  "name": "whois-domain-checker",
+  "name": "mass-domain-expiry-checker",
   "version": "1.0.0",
   "description": "Extracts expiry dates for domains with filtering for each TLD",
   "main": "checker.js",
@@ -8,10 +8,12 @@
     "moment": "^2.17.1",
     "whois": "^2.3.6"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jest": "*"
+  },
   "scripts": {
-    "start": "node checker.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "jest --coverage"
   },
   "keywords": [],
   "author": "",
