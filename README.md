@@ -18,6 +18,12 @@ or
 
     npm start
 
+## Test
+
+Testing uses `jest`.
+
+    npm test
+
 ## More TLD support
 
 This tool assumes that whois query results are consistent between all queries to a given TLD
